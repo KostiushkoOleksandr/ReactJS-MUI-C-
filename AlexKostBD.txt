@@ -1,0 +1,21 @@
+USE [AlexKostDB]
+GO
+SET IDENTITY_INSERT [dbo].[Questions] ON 
+GO
+INSERT [dbo].[Questions] ([QnId], [QnInWords], [ImageName], [Option1], [Option2], [Option3], [Option4], [Answer]) VALUES (1, N'Забезпечення доступу до даних на основі прав доступу - це', NULL, N'Доступність', N'Цілісність', N'Конфіденційність', N'Загальноприйнятість', 2)
+GO
+INSERT [dbo].[Questions] ([QnId], [QnInWords], [ImageName], [Option1], [Option2], [Option3], [Option4], [Answer]) VALUES (2, N'Кваліфікований ІТ-фахівець, який знається на роботі компютерних систем і здійснює втручання до компютера, щоб без відома власника дізнатися деякі особисті відомості або пошкодити дані, що зберігаються в компютері.', NULL, N'хакер', N'програміст', N'користувач', N'адміністратор', 0)
+GO
+INSERT [dbo].[Questions] ([QnId], [QnInWords], [ImageName], [Option1], [Option2], [Option3], [Option4], [Answer]) VALUES (3, N'Що може свідчити про приналежність електронного документа певній особі ?', NULL, N'Електронний підпис', N'Двофакторна авторизація', N'Власний логін облікового запису', N'Надійний пароль', 0)
+GO
+INSERT [dbo].[Questions] ([QnId], [QnInWords], [ImageName], [Option1], [Option2], [Option3], [Option4], [Answer]) VALUES (4, N'Який пароль серед наведених є найнадійнішим ?', NULL, N'qwertyuiopasdfgh', N'Hello World!', N'1234567890', N'H#76&4Waя', 3)
+GO
+INSERT [dbo].[Questions] ([QnId], [QnInWords], [ImageName], [Option1], [Option2], [Option3], [Option4], [Answer]) VALUES (5, N'Який метод використовують деякі сайти для захисту пароля облікового запису від зламу ?', N'Електронний підпис', N'Багатофакторна авторизація', N'Антивірусні програми', N'Логін облікового запису', 1)
+GO
+INSERT [dbo].[Questions] ([QnId], [QnInWords], [ImageName], [Option1], [Option2], [Option3], [Option4], [Answer]) VALUES (6, N'Які параметри щодо захисту інформації повинна забезпечувати надійна інформаційна система?', NULL, N'Доступність', N'Конфіденційність', N'Правдивість', N'Цілісність', 3)
+GO
+SET IDENTITY_INSERT [dbo].[Questions] OFF
+GO
+
+
+
