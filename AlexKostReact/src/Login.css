@@ -1,0 +1,122 @@
+/* body{
+    --bg-clr: #131313;
+    background-color: var(--bg-clr);
+}
+
+.img-wrapper{
+    max-width: 150px;
+    position: relative;
+    margin: auto;
+}
+
+.img-wrapper img{
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.img-wrapper::before{
+    content: "";
+    position: absolute;
+    inset: -15px;
+    border: 6px solid var(--bg-clr);
+    border-top-color: #fff;
+    border-bottom-color: #ababab;
+    border-radius: 50%;
+    z-index: -1;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin{
+    to{ transform: rotate(360deg);}
+} */
+
+body{
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+.earth{
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.earth-demo {
+    background: #000;
+    position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    overflow: hidden;
+}
+
+.earth-demo:before {
+    background: url(https://cssanimation.rocks/images/random/space2.jpg) repeat center;
+    background-size: cover;
+    content: "";
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.more-info {
+    background-image: linear-gradient(to bottom, rgba(10,10,10,1), black);
+    border-radius: 1em;
+    color: #fff;
+    opacity: 0;
+    padding: 1em;
+    transform: scale(.8);
+    transform-origin: 0 0;
+    width: 400px;
+}
+
+.earth img, .moon img {
+    border-radius: 50%;
+    box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6);
+}
+
+.earth img {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+.moon-container {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+}
+
+.moon {
+    animation: spin 20s linear infinite;
+    background: none;
+    height: 50px;
+    pointer-events: none;
+    transform-origin: 25px;
+    width: 50px;
+}
+
+.moon img{
+    height: 50px;
+    transform: translateX(-160px) translateY(-160px);
+    width: 50px;
+}
+
+.earth img, 
+.moon img {
+    border-radius: 50%;
+    box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6);
+}
+
+@keyframes spin {
+    to {
+      transform: rotateZ(360deg);
+    }
+}

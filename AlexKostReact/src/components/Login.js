@@ -6,7 +6,7 @@ import useForm from '../hooks/useForm'
 import { createAPIEndpoint, ENDPOINTS } from '../api'
 import useStateContext from '../hooks/useStateContext'
 import { useNavigate } from 'react-router'
-
+import '../Login.css';
 
 const getFreshModel = () => ({
     name: '',
@@ -50,17 +50,25 @@ export default function Login() {
         
     return (
         <Center>
-            {/* <Card sx={{ width: 400 }}> */}
+            <article class="earth-demo">
+                <div class="earth">
+                    <img 
+                    src="https://cssanimation.rocks/images/random/earth.png"/>
+                </div>
+                <div class="moon-container">
+                <div class="moon">
+                    <img 
+                    src="https://cssanimation.rocks/images/random/moon.png"/>
+                </div>
+                </div>
+            </article>
                 <CardContent sx={{ textAlign: 'center', width: 400, }}>
-                <Typography variant="h3" sx={{ my: 3 }}>
-                        Alex Kost 
-                    </Typography>
                     <Box sx={{
                         '& .MuiTextField-root': {
                             m: 1,
                             width: '90%'
                         }
-                    }}>  
+                    }}>
                         <form noValidate autoComplete="off" onSubmit={login}>
                             <TextField
                                 label="Пошта"
@@ -82,10 +90,11 @@ export default function Login() {
                                 size="large"
                                 sx={{ width: '90%' }}>Розпочати</Button>
                         </form>
-                        
                     </Box>
                 </CardContent>
-            {/* </Card> */}
         </Center> 
     )
 }
+
+
+
