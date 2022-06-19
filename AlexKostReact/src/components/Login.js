@@ -7,6 +7,7 @@ import { createAPIEndpoint, ENDPOINTS } from '../api'
 import useStateContext from '../hooks/useStateContext'
 import { useNavigate } from 'react-router'
 
+
 const getFreshModel = () => ({
     name: '',
     email: ''
@@ -28,8 +29,6 @@ export default function Login() {
     useEffect(() => {
         resetContext()
     }, [])
-
-
     const login = e => {
         e.preventDefault();
         if (validate())
@@ -41,7 +40,6 @@ export default function Login() {
                 })
                 .catch(err => console.log(err))
     }
-
     const validate = () => {
         let temp = {}
         temp.email = (/\S+@\S+\.\S+/).test(values.email) ? "" : "Електронна адреса недійсна."
@@ -49,20 +47,20 @@ export default function Login() {
         setErrors(temp)
         return Object.values(temp).every(x => x == "")
     }
-
+        
     return (
         <Center>
-            <Card sx={{ width: 400 }}>
-                <CardContent sx={{ textAlign: 'center' }}>
-                    {/* <Typography variant="h3" sx={{ my: 3 }}>
+            {/* <Card sx={{ width: 400 }}> */}
+                <CardContent sx={{ textAlign: 'center', width: 400, }}>
+                <Typography variant="h3" sx={{ my: 3 }}>
                         Alex Kost 
-                    </Typography> */}
+                    </Typography>
                     <Box sx={{
                         '& .MuiTextField-root': {
                             m: 1,
                             width: '90%'
                         }
-                    }}>
+                    }}>  
                         <form noValidate autoComplete="off" onSubmit={login}>
                             <TextField
                                 label="Пошта"
@@ -84,11 +82,10 @@ export default function Login() {
                                 size="large"
                                 sx={{ width: '90%' }}>Розпочати</Button>
                         </form>
+                        
                     </Box>
                 </CardContent>
-            </Card>
-        </Center>
-
-
+            {/* </Card> */}
+        </Center> 
     )
 }

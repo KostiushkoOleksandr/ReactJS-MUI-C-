@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router';
 import { createAPIEndpoint, ENDPOINTS } from '../api'
 import { getFormatedTime } from '../helper';
 import useStateContext from '../hooks/useStateContext'
-import { green } from '@mui/material/colors';
 import Answer from './Answer';
+
 
 export default function Result() {
   const { context, setContext } = useStateContext()
@@ -73,21 +73,21 @@ export default function Result() {
               Ваш результат
             </Typography>
             <Typography variant="h5" sx={{ fontWeight: 600 }}>
-              <Typography variant="span" color={green[500]}>
+              <Typography variant="span" color={'#484BF2'}>
                 {score}
               </Typography>/5
             </Typography>
             <Typography variant="h6">
-            Зайняло {getFormatedTime(context.timeTaken) + ' хв/с'}
+            Часу використано {getFormatedTime(context.timeTaken)}
             </Typography>
             <Button variant="contained"
-              sx={{ mx: 1 }}
+              sx={{ mx: 1, mt: 2 }}
               size="small"
               onClick={submitScore}>
               Надіслати
             </Button>
             <Button variant="contained"
-              sx={{ mx: 1 }}
+              sx={{ mx: 1, mt: 2 }}
               size="small"
               onClick={restart}>
               Повторити спробу
@@ -104,11 +104,11 @@ export default function Result() {
             </Alert>
           </CardContent>
         </Box>
-        {/* <CardMedia
+        <CardMedia
           component="img"
           sx={{ width: 220 }}
           image="./result.png"
-        /> */}
+        />
       </Card>
       <Answer qnAnswers={qnAnswers} />
     </>

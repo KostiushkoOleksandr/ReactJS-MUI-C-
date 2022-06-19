@@ -14,9 +14,9 @@ namespace QuizAPI.Controllers
     [ApiController]
     public class QuestionController : ControllerBase
     {
-        private readonly QuizDbContext _context;
+        private readonly AlexKostDbContext _context;
 
-        public QuestionController(QuizDbContext context)
+        public QuestionController(AlexKostDbContext context)
         {
             _context = context;
         }

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\QuizAPI",
-    "\\QuizAPI\\Controllers"
+    "\\QuizAPI\\Controllers",
+    "\\QuizAPI\\Models"
   ],
-  "SelectedNode": "\\QuizAPI\\Controllers\\ParticipantController.cs",
+  "SelectedNode": "\\QuizAPI\\Models\\Question.cs",
   "PreviewInSolutionExplorer": false
 }
